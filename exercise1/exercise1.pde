@@ -1,3 +1,4 @@
+int [] numbers = new int [25];
 
 void setup()
 {
@@ -6,4 +7,10 @@ void setup()
 
 void draw()
 {
+  background(255);
+  fill(0,0,255);
+  for(int i=0; i<numbers.length; ++i){
+    rect(i*20, 0, 20, numbers[i]%500);
+  }
+  numbers[mouseX/20] += 3;
 }
